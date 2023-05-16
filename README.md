@@ -1,1 +1,1 @@
-# holystone.github.io
+# 个人小说材料收集平台
