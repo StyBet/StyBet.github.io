@@ -2,22 +2,17 @@ $(function(){
     var playerContent1 = $('#player-content1');// 歌曲信息模块部分dom元素
     var musicName = $('.music-name');          // 歌曲名部分dom元素 
     var artistName = $('.artist-name');        // 歌手名部分dom元素
-    
     var musicImgs = $('.music-imgs');          // 左侧封面图dom元素
-  
     var playPauseBtn = $('.play-pause');       // 播放/暂停按钮 dom元素
     var playPrevBtn = $('.prev');              // 上一首按钮 dom元素
     var playNextBtn = $('.next')               // 下一首按钮 dom元素
-    
     var time = $('.time');                     // 时间信息部分 dom元素
     var tProgress = $('.current-time');        // 当前播放时间文本部分 dom元素
     var totalTime = $('.total-time');          // 歌曲总时长文本部分 dom元素
-    
     var sArea = $('#s-area');                  // 进度条部分
     var insTime = $('#ins-time');              // 鼠标移动至进度条上面，显示的信息部分
     var sHover = $('#s-hover');                // 鼠标移动至进度条上面，前面变暗的进度条部分
     var seekBar = $('#seek-bar');              // 播放进度条部分
-    
     // 一些计算所需的变量
     var seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0
     var musicImgsData = ['img/bg.jpg','img/bg1.jpg','img/bg2.jpg']    // 图片地址数组
@@ -25,23 +20,20 @@ $(function(){
     var artistNameData = ['花粥/王胜娚','花粥/马雨阳','花粥']            // 创作歌手数组
     var musicUrls=['mp3/music1.mp3','mp3/music2.mp3','mp3/music3.mp3'];// 歌曲mp3数组
     var currIndex = -1;              // 当前播放索引
-    
     var buffInterval = null          // 初始化定时器 判断是否需要缓冲
     var len = musicNameData.length;  // 歌曲长度
- 
-
     // 点击 播放/暂停 按钮，触发该函数
     // 作用：根据audio的paused属性 来检测当前音频是否已暂停  true:暂停  false:播放中
     function playPause(){
         if(audio.paused){
-            playerContent1.addClass('active'); // 内容栏上移
-            musicImgs.addClass('active');      // 左侧图片开始动画效果
+//            playerContent1.addClass('active'); // 内容栏上移
+//            musicImgs.addClass('active');      // 左侧图片开始动画效果
             playPauseBtn.attr('class','btn play-pause icon-zanting iconfont') // 显示暂停图标
             checkBuffering(); // 检测是否需要缓冲
             audio.play();     // 播放
         }else{
-            playerContent1.removeClass('active'); // 内容栏下移
-            musicImgs.removeClass('active');      // 左侧图片停止旋转等动画效果
+//            playerContent1.removeClass('active'); // 内容栏下移
+//            musicImgs.removeClass('active');      // 左侧图片停止旋转等动画效果
             playPauseBtn.attr('class','btn play-pause icon-jiediankaishi iconfont'); // 显示播放按钮
             clearInterval(buffInterval);          // 清除检测是否需要缓冲的定时器
             musicImgs.removeClass('buffering');    // 移除缓冲类名

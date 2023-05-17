@@ -9,8 +9,7 @@ a{text-decoration:none;}
 li{list-style:none;}
 img{display:block;border:0px;}
 /*end*/
-.weizi{width:730px;height:30px;line-height:30px; background:url("../images/weizi.png") 7px 5px no-repeat; background-color:#fff;
-border-bottom:1px solid #ccc;}
+.weizi{width:730px;height:30px;line-height:30px; background:url("../images/weizi.png") 7px 5px no-repeat; background-color:#fff;}
 .weizi .wz_text{font-size:16px;color:#444;padding-left:25px;}
 .weizi .wz_text h1{font-size:16px;color:#F00E71;display:inline;font-weight:500;}
 .weizi .wz_text a{color:#444;}
@@ -48,14 +47,13 @@ margin:10px 10px 0px 10px;position:relative;border-radius:5px;padding:10px;color
 .rj_content .shiguang .sg_text img{position:absolute;top:40px;left:-14px;z-index:1;}
 /*相册*/
 #content_xc{width:990px;margin:5px auto; background:#fff;}
-#content_xc .weizi{width:990px;height:30px;line-height:30px; background:url("../images/weizi.png") 7px 5px no-repeat; background-color:#fff;
-border-bottom:1px solid #ccc;}
+#content_xc .weizi{width:990px;height:60px;line-height:60px; background:url("../images/weizi.png") 7px 5px no-repeat; background-color:#fff;}
 .weizi .wz_text{font-size:16px;color:#444;padding-left:25px;}
 .weizi .wz_text h1{font-size:16px;color:#F00E71;display:inline;font-weight:500;}
 .weizi .wz_text a{color:#444;}
 .weizi .wz_text a:hover{text-decoration:underline;color:#f00;}
 #content_xc .xc_content{width:990px;}
-.xc_content .con-bg{width:990px;background:#fff; margin:0 auto; overflow:hidden; padding-top:8px; padding-bottom:10px;filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);/*ie*/
+.xc_content .con-bg{width:990px;background:#fff; margin:5px auto; overflow:hidden; padding-top:8px; padding-bottom:10px;filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);/*ie*/
 -moz-box-shadow: 2px 2px 10px #909090;/*firefox*/
 -webkit-box-shadow: 2px 2px 10px #909090;/*safari或chrome*/
 box-shadow:2px 2px 10px #909090;/*opera或ie9*/}

@@ -5,10 +5,17 @@
 <title>个人博客</title>
 <meta name="keywords" content="个人博客" />
 <meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" href="css/index.css"/>
 <link rel="stylesheet" href="css/style.css"/>
-<script type="text/javascript" src="js/jquery1.42.min.js"></script>
-<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<!--音乐播放器样式-->
+<link rel="stylesheet" href="font/iconfont.css">
+<link rel="stylesheet" href="css/musicstyle.css">
+<!--<script type="text/javascript" src="js/jquery1.42.min.js"></script>-->
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<!--<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>-->
+<script src="js/index.js"></script>
 <!--[if lt IE 9]>
     <script src="js/html5.js"></script>
     <![endif]-->
@@ -37,20 +44,62 @@
        <!--nav end-->
     <!--content start-->
     <div id="content_xc">
-        <div class="weizi">
-            <div class="wz_text">当前位置：<a href="#">首页</a></div>
+        <div class="weizi" style="display:flex;align-items:center;">
+            <div class="wz_text" style="flex:1;">当前位置：<a href="#">首页</a></div>
+            <!-- 歌曲信息模块 -->
+            <div id="player-content1">
+                <!-- 歌曲名 -->
+                <div class="music-name"></div>
+                <!-- 歌手名 -->
+                <div class="artist-name"></div>
+                <!-- 歌曲时间 -->
+                <div class="time">
+                    <!-- 当前播放的时间 -->
+                    <div class="current-time"></div>
+                    <!-- 歌曲总时长 -->
+                    <div class="total-time"></div>
+                </div>
+                <!-- 进度条 -->
+                <div id="s-area">
+                    <!-- 鼠标移动到进度条上，显示的时间信息 -->
+                    <div id="ins-time"></div>
+                    <!-- 鼠标移动到进度条上，进度条变暗部分-->
+                    <div id="s-hover"></div>
+                    <!-- 表示当前歌曲播放进度的蓝色进度条 -->
+                    <div id="seek-bar"></div>
+                </div>
+            </div>
+            <div style="display:flex;">
+                <!-- 左侧歌曲封面旋转模块 -->
+                <div class="music-imgs">
+                    <!-- 封面图 -->
+                    <div class="img"></div>
+                    <!-- 歌曲缓冲时的提示文字 -->
+                    <div id="buffer-box">缓冲…</div>
+                </div>
+                <!-- 右侧歌曲操作模块 -->
+                <div class="player-controls">
+                    <!-- 上一首按钮 -->
+                    <div class="btn prev iconfont">&#xe603;</div>
+                    <!-- 暂停/播放 按钮 -->
+                    <div class="btn play-pause icon-jiediankaishi iconfont"></div>
+                    <!-- 下一首按钮 -->
+                    <div class="btn next iconfont">&#xe602;</div>
+                </div>
+            </div>
         </div>
+
         <div class="xc_content">
             <div class="con-bg">
                 <div class="w960 mt_10">
-                    <div class="w650">
-                        <iframe name="toppage" width=100% height=100% marginwidth=0 marginheight=0 frameborder="no" border="0"  src="musicPlayer.html" ></iframe>
+                    <div class="w650" style="height:700px">
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <script type="text/javascript">jQuery(".lanmubox").slide({easing:"easeOutBounce",delayTime:400});</script>
-    <script  type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
 </body>
 </html>
