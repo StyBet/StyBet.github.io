@@ -83,7 +83,7 @@
          </div>
     </div>
     <!--content end-->
-    <script type="text/javascript">jQuery(".lanmubox").slide({easing:"easeOutBounce",delayTime:400});</script>
+    <script type="text/javascript">jQuery(".lanmubox").slide({easing:"easeOutBounce",delayTime:800});</script>
     <script>
     var timer, m = 0, m1 = $("img[rel='lazy']").length;
     function fade() {
@@ -98,11 +98,11 @@
                 $(this).fadeIn(600);
                 var _left = $(this).parent().parent().attr("_left");
                 if (_left != undefined)
-                    $(this).parent().parent().animate({ left: _left }, 400);
+                    $(this).parent().parent().animate({ left: _left }, 600);
                 m++;
             }
         });
-        if (m < m1) { timer = window.setTimeout(fade, 300); }
+        if (m < m1) { timer = window.setTimeout(fade, 500); }
         else { window.clearTimeout(timer); }
     }
     $(function () {
