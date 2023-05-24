@@ -15,50 +15,58 @@ $(function(){
     var web_iframe = $('#web_iframe')
     var res_iframe = $('#res_iframe')
     var good_iframe = $('#good_iframe')
+    var game = $('#xcl')
 
     function aboutMe(){
-        showSomePage(me_iframe)
+        clearClass()
         show_title.html('关于我')
         about_me.addClass("nava")
+        me_iframe.load('about.html')
     }
     function webNovel(){
-        showSomePage(web_iframe)
+        clearClass()
         show_title.html('拆网络小说')
         web_novel.addClass("nava")
+        web_iframe.load('shuo.html')
     }
     function resCe(){
-        showSomePage(res_iframe)
+        clearClass()
         show_title.html('装逼素材整理')
         resource.addClass("nava")
+        res_iframe.load('riji.html')
     }
     function picShow(){
-        show_title.html('相册展示')
         clearClass()
-        xc_iframe.css('visibility','visible') //仅仅展示这个页面
+        show_title.html('相册展示')
         pic_show.addClass("nava")
+        xc_iframe.css('visibility','visible') //仅仅展示这个页面
     }
     function oldNew(){
-        showSomePage(old_iframe)
+        clearClass()
         show_title.html('古籍化用')
         old_new.addClass("nava")
+        old_iframe.load('learn.html')
     }
     function goodSetting(){
-        showSomePage(good_iframe)
+        clearClass()
         show_title.html('各种优秀设定')
         good_setting.addClass("nava")
+        good_iframe.load('guestbook.html')
     }
     function Home(){
         clearClass()
-        show_title.html('首页')
+        show_title.html('娱乐春秋')
         home.addClass("nava")
+        game.load('home.html')
     }
     function clearClass(){
         xc_iframe.css('visibility','hidden');
-        me_iframe.hide();
-        old_iframe.hide();
-        web_iframe.hide();
-        res_iframe.hide();
-        good_iframe.hide();
+        me_iframe.empty();
+        old_iframe.empty();
+        web_iframe.empty();
+        res_iframe.empty();
+        good_iframe.empty();
+        game.empty()
         ////////////
         about_me.removeClass("nava")
         web_novel.removeClass("nava")
@@ -72,10 +80,6 @@ $(function(){
         clearClass()
         obj.show()
     }
-    function setStyle(obj){
-
-    }
-
     // 初始化函数
     function initWeb() {
         about_me.on('click',aboutMe);
